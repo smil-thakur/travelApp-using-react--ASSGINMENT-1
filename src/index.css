@@ -1,0 +1,150 @@
+
+
+body{
+  font-family: 'Staatliches', cursive;
+}
+
+.heading{
+  font-size: 8vw;
+  text-align: center;
+  margin: 0;
+}
+
+.tagHint{
+  width: 100%;
+  text-align: center;
+  font-size: 25px;
+}
+
+.tagContainer{
+  background-color: bisque;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 4px;
+  margin: 10px;
+  justify-content: center;
+  height: 150px;
+  overflow: scroll;
+}
+
+
+
+.tag{
+  background-color: white;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tagSelected{
+  background-color: black;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.searchContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.searchContainer > input {
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+}
+
+.placeContainer {
+  background-color: #f7f7f7;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.destinationName {
+  font-size: 24px;
+  margin-bottom: 10px; 
+}
+
+.imageDescContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageContainer {
+  width: 100%;
+  max-width: 400px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin-top: 10px;
+}
+
+.clearTag{
+  width: fit-content;
+  margin-left: 15px;
+}
+
+/* Media query for larger displays (e.g., tablets and desktops) */
+@media (min-width: 768px) {
+
+  .tagContainer{
+    height: fit-content;
+  }
+
+  .tagHint{
+
+    text-align: start;
+    display: block;
+    font-size: 25px;
+    margin-left: 15px;
+  }
+
+  .mainContainer{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .placeContainer {
+    max-width: 400px;
+    min-height: 500px;
+    margin: 2px;
+    flex-direction: column; 
+    text-align: center;
+  }
+
+  .imageDescContainer {
+      margin-top: 20px;
+      align-items: center;
+  }
+
+  .destinationName {
+      text-align: center; 
+      margin-bottom: 20px; 
+  }
+
+  .imageContainer > img {
+      max-width: 400px;
+      max-height: 200px;
+  }
+}
