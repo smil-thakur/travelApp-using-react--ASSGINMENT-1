@@ -54,6 +54,16 @@ const App = () => {
     const [tags, setTags] = useState([])
 
 
+    //method to suffle an array
+
+    function shuffleArray(array) {
+        const shuffledArray = [...array];
+        for (let i = shuffledArray.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+        }
+        return shuffledArray;
+    }
 
     //extracting all the tags
     useEffect(() => {
@@ -64,7 +74,9 @@ const App = () => {
             placeTags = [...place.tags, ...placeTags]
         })
 
-        setTags(placeTags)
+        const mixedTags = shuffleArray(placeTags)
+
+        setTags(mixedTags)
 
     }, [])
 
